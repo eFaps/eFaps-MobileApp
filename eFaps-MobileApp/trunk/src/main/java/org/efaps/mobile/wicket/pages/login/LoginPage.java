@@ -29,6 +29,7 @@ import org.apache.wicket.markup.html.form.RequiredTextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.resource.CssResourceReference;
 import org.efaps.mobile.wicket.MobileSession;
+import org.efaps.mobile.wicket.pages.main.MainPage;
 
 /**
  * TODO comment!
@@ -66,7 +67,7 @@ public class LoginPage
 
 
                 if (session.authenticate(LoginPage.this.username, LoginPage.this.password)) {
-                    //getRequestCycle().setResponsePage(new GatherInfoPage());
+                    getRequestCycle().setResponsePage(MainPage.class);
                 } else {
                     final LoginPage page = new LoginPage();
                     getRequestCycle().setResponsePage(page);
