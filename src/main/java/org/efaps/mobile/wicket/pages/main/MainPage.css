@@ -1,0 +1,204 @@
+/*
+ * Copyright 2003 - 2012 The eFaps Team
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Author:          The eFaps Team
+ * Revision:        $Rev: 7505 $
+ * Last Changed:    $Date: 2012-05-11 13:14:52 -0500 (Fri, 11 May 2012) $
+ * Last Changed By: $Author: jan@moxter.net $
+ */
+
+body.mobile:before {
+    content: "";
+    height: 300px;
+    left: 0;
+    position: absolute;
+    top: 277px;
+    width: 100%;
+    z-index: -1;
+}
+body.mobile {
+    background: none repeat scroll 0 0 #262C36;
+}
+body {
+    font: 12px HelveticaNeue,Helvetica,Arial;
+    overflow-x: hidden;
+}
+body, h2 {
+    margin: 0;
+}
+
+p {
+    color: #555555;
+    font-family: HelveticaNeue-Light,HelveticaNeue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+.header {
+    background: url("./header.png") repeat-x scroll 0 0 #191919;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.8);
+    height: 65px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+
+
+.stream {
+    background: url("./stream.jpg") repeat scroll 0 0 #8AB4B5;
+    box-shadow: 0 1px 0 white;
+    height: 212px;
+    position: absolute;
+    top: 65px;
+    width: 100%;
+}
+
+.con {
+    border-left: 1px solid #9EABAB;
+    border-right: 1px solid #9EABAB;
+    box-shadow: -1px 0 0 white, 1px 0 0 white;
+    margin: 0 auto;
+    position: relative;
+    width: 1100px;
+}
+
+.stream .con {
+    border-color: rgba(0, 0, 0, 0.25);
+    box-shadow: none;
+    height: 100%;
+}
+
+.tile {
+    -moz-box-sizing: border-box;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+    cursor: default;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 15%;
+}
+
+.user {
+    background: none repeat scroll 0 0 transparent;
+    box-shadow: none;
+    overflow: visible;
+    text-align: left;
+    width: 25%;
+}
+
+.tile h2 {
+    color: rgba(255, 255, 255, 0.7);
+    font: bold 34px/1 HelveticaNeue,Helvetica,Arial;
+    margin-left: 40px;
+    margin-top: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tile h2 span {
+    font-family: HelveticaNeue-UltraLight,Helvetica,Arial;
+    font-weight: normal;
+}
+
+.tile p {
+    background-color: rgba(0, 0, 0, 0.01);
+    background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 40px;
+    margin-top: 5px;
+    overflow: hidden;
+    padding: 2px 12px;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+
+.user ul {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    bottom: 0;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+    height: 53px;
+    left: 0;
+    margin: 0;
+    padding: 0 40px 0 25px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.user ul li {
+    -moz-box-sizing: border-box;
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: -1px 0 0 rgba(255, 255, 255, 0.25) inset;
+    float: left;
+    height: 100%;
+    list-style: none outside none;
+    position: relative;
+    width: 25%;
+}
+
+
+
+.user ul li a.current:after {
+    border-color: transparent transparent #FFFFFF;
+    border-style: solid;
+    border-width: 8px;
+    bottom: -1px;
+    content: "";
+    height: 0;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    width: 0;
+    z-index: 5;
+}
+
+.user ul li a.current {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.user ul li a {
+    -moz-transition: all 0.2s ease-in-out 0s;
+    color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    font-family: Icons;
+    font-size: 31px;
+    height: 100%;
+    left: 0;
+    line-height: 42px;
+    overflow: hidden;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    width: 100%;
+}
+
