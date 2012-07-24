@@ -18,14 +18,17 @@
  * Last Changed By: $Author$
  */
 
-
 package org.efaps.mobile.wicket.pages.login;
 
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.PasswordTextField;
+import org.apache.wicket.markup.html.form.RequiredTextField;
+import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.resource.CssResourceReference;
-
+import org.efaps.mobile.wicket.MobileSession;
 
 /**
  * TODO comment!
@@ -36,10 +39,44 @@ import org.apache.wicket.request.resource.CssResourceReference;
 public class LoginPage
     extends WebPage
 {
+
     /**
      * Needed for serialization.
      */
     private static final long serialVersionUID = 1L;
+
+
+    private String username;
+
+    private String password;
+
+    public LoginPage()
+    {
+        final CompoundPropertyModel<LoginPage> model = new CompoundPropertyModel<LoginPage>(this);
+        final Form<LoginPage> form = new Form<LoginPage>("form", model)
+        {
+
+            private static final long serialVersionUID = 1L;
+
+            @Override
+            protected void onSubmit()
+            {
+                super.onSubmit();
+                final MobileSession session = (MobileSession) getSession();
+
+
+                if (session.authenticate(LoginPage.this.username, LoginPage.this.password)) {
+                    //getRequestCycle().setResponsePage(new GatherInfoPage());
+                } else {
+                    final LoginPage page = new LoginPage();
+                    getRequestCycle().setResponsePage(page);
+                }
+            }
+        };
+        add(form);
+        form.add(new RequiredTextField<String>("username"));
+        form.add(new PasswordTextField("password"));
+    }
 
     @Override
     public void renderHead(final IHeaderResponse _response)
