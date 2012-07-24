@@ -18,15 +18,16 @@
  * Last Changed By: $Author$
  */
 
-
 package org.efaps.mobile.wicket.pages.main;
 
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.request.resource.CssResourceReference;
+import org.efaps.db.Context;
 import org.efaps.mobile.wicket.pages.ISecuredPage;
-
+import org.efaps.util.EFapsException;
 
 /**
  * TODO comment!
@@ -38,6 +39,24 @@ public class MainPage
     extends WebPage
     implements ISecuredPage
 {
+
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+
+    public MainPage()
+    {
+        try {
+            add(new Label("username", Context.getThreadContext().getPerson().getFirstName() + " "
+                            + Context.getThreadContext().getPerson().getLastName()));
+            add(new Label("company", Context.getThreadContext().getCompany().getName()));
+        } catch (final EFapsException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void renderHead(final IHeaderResponse _response)
     {
