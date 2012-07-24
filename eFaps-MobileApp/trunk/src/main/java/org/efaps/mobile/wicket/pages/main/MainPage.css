@@ -110,8 +110,8 @@ a {
 
 .tile h2 {
     color: rgba(255, 255, 255, 0.7);
-    font: bold 34px/1 HelveticaNeue,Helvetica,Arial;
-    margin-left: 40px;
+    font: bold 29px/1 HelveticaNeue,Helvetica,Arial;
+    margin-left: 12px;
     margin-top: 60px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -129,15 +129,16 @@ a {
     border-radius: 2px 2px 2px 2px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset, 0 1px 0 rgba(255, 255, 255, 0.5) inset;
     color: white;
-    display: inline-block;
     font-size: 12px;
-    margin-left: 40px;
+    margin-left: 12px;
+    margin-right: 12px;
     margin-top: 5px;
     overflow: hidden;
     padding: 2px 12px;
     text-overflow: ellipsis;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
+    text-align: center;
 }
 
 
@@ -200,5 +201,49 @@ a {
     text-decoration: none;
     top: 0;
     width: 100%;
+}
+
+#footer {
+    background: #262C36;
+    color: white;
+    -webkit-box-shadow: black 0px 10px 10px -10px inset;
+    -moz-box-shadow: black 0px 10px 10px -10px inset;
+    box-shadow: black 0px 10px 10px -10px inset;
+    font-size: 20px;
+    color: #111;
+    text-shadow: rgba(102, 120, 138, 0.45) 0px 1px 0px;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+
+.footer .con {
+    border: none;
+    box-shadow: none;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.footer h4 {
+    display: inline-block;
+    position: relative;
+}
+
+.dashboard {
+    background-color: #DEE9E9;
+    position: relative;
+    margin-top: 277px;
+    width: 100%;
+    z-index: 3;
+    -webkit-box-shadow: white 0px 1px 0px inset, rgba(0, 0, 0, 0.36) 0px -28px 29px -29px;
+    -moz-box-shadow: white 0px 1px 0px inset, rgba(0,0,0,0.36) 0px -28px 29px -29px;
+    box-shadow: white 0px 1px 0px inset, rgba(0, 0, 0, 0.36) 0px -28px 29px -29px;
+}
+
+.scroll {
+    z-index: 2;
+    min-height: 375px;
 }
 
