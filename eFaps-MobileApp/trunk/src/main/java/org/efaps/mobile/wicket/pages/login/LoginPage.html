@@ -26,16 +26,18 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <!--
     <link rel="stylesheet" type="text/css" href="LoginPage.css"/>
+    -->
     <title>eFaps - Mobile Application</title>
 </head>
 <body class="login_page">
     <div class="login_wrapper">
         <div class="login_box">
-            <form class="login_form" autocomplete="off" action="dashboard.html">
+            <form wicket:id="form" class="login_form" autocomplete="off" action="dashboard.html">
                 <p>
-                    <input id="username" type="text" placeholder="Username" />
-                    <input id="password" type="password" placeholder="Password" />
+                    <input wicket:id="username" type="text" placeholder="Username" />
+                    <input wicket:id="password" type="password" placeholder="Password" />
                 </p>
                 <p>
                     <input type="submit" value="Login">
