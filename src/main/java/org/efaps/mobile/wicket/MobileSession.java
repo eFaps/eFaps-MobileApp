@@ -158,7 +158,6 @@ public class MobileSession
     /* (non-Javadoc)
      * @see org.apache.wicket.protocol.http.WebSession#authenticate(java.lang.String, java.lang.String)
      */
-    @Override
     public boolean authenticate(final String _username,
                                 final String _password)
     {
