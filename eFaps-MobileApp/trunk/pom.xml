@@ -33,7 +33,7 @@
     <parent>
         <groupId>org.efaps</groupId>
         <artifactId>efaps-parent</artifactId>
-        <version>3.0.1-SNAPSHOT</version>
+        <version>3.1.0-SNAPSHOT</version>
     </parent>
     <packaging>jar</packaging>
     <artifactId>efaps-mobile</artifactId>
@@ -178,7 +178,7 @@
         <dependency>
             <groupId>org.efaps</groupId>
             <artifactId>efaps-kernel</artifactId>
-            <version>3.0.0-SNAPSHOT</version>
+            <version>3.1.0-SNAPSHOT</version>
         </dependency>
 
         <!-- to define a higher version (needed from another tool) -->
@@ -200,25 +200,25 @@
        <dependency>
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket-core</artifactId>
-            <version>6.5.0</version>
+            <version>6.7.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket-extensions</artifactId>
-            <version>6.5.0</version>
+            <version>6.7.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket-datetime</artifactId>
-            <version>6.5.0</version>
+            <version>6.7.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket-devutils</artifactId>
-            <version>6.5.0</version>
+            <version>6.7.0</version>
             <scope>compile</scope>
         </dependency>
 
